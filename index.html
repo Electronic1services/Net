@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>منيو ڤاي كوفي | VAY Coffee</title>
+<meta name="description" content="منيو ڤاي كوفي - قهوة مختصة لأيام أجمل">
+<meta name="theme-color" content="#E9E1D6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --stone:#E9E1D6;
+  --paper:#F4EFE8;
+  --ink:#1F1B18;
+  --muted:#6F675E;
+  --sage:#5F6A4A;
+  --line:rgba(31,27,24,.18);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:68px}
+body{
+  font-family:"Readex Pro","Segoe UI",Tahoma,sans-serif;
+  background:var(--stone);color:var(--ink);
+  line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--sage);outline-offset:3px;border-radius:4px}
+
+/* Hero */
+.hero{
+  text-align:center;padding:44px 20px 30px;
+  background:
+    radial-gradient(120% 80% at 100% 0%, rgba(255,255,255,.55), transparent 60%),
+    var(--stone);
+}
+.hero img{width:170px;height:auto;margin:0 auto 14px}
+.hero p{font-size:1.05rem;font-weight:300;letter-spacing:.02em;color:var(--muted)}
+
+/* Category nav */
+.nav{
+  position:sticky;top:0;z-index:10;
+  background:rgba(233,225,214,.94);backdrop-filter:blur(8px);
+  border-block:1px solid var(--line);
+}
+.nav ul{
+  list-style:none;display:flex;gap:6px;overflow-x:auto;
+  padding:10px 16px;scrollbar-width:none;
+  max-width:760px;margin:auto;
+}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a{
+  display:block;white-space:nowrap;text-decoration:none;
+  padding:6px 14px;border-radius:999px;font-size:.92rem;color:var(--muted);
+  border:1px solid transparent;
+}
+.nav a[aria-current="true"]{color:var(--paper);background:var(--ink)}
+
+main{max-width:760px;margin:auto;padding:0 20px 56px}
+section{padding-top:40px}
+h2{font-size:1.5rem;font-weight:600;line-height:1.3}
+h2 small{display:block;font-size:.78rem;font-weight:400;color:var(--muted);letter-spacing:.18em;direction:ltr;text-align:right;margin-top:2px}
+.head{padding-bottom:12px;border-bottom:2px solid var(--ink);margin-bottom:4px}
+
+/* Menu rows */
+.list{list-style:none}
+.row{
+  display:flex;align-items:baseline;gap:10px;
+  padding:13px 0;border-bottom:1px solid var(--line);
+}
+.row .name{font-weight:400;font-size:1.02rem}
+.row .dots{flex:1;border-bottom:1.5px dotted rgba(31,27,24,.28);transform:translateY(-4px);min-width:16px}
+.row .price{font-weight:600;font-size:1.05rem;font-variant-numeric:tabular-nums;white-space:nowrap}
+.row .price i{font-style:normal;font-weight:300;font-size:.78rem;color:var(--muted);margin-inline-start:4px}
+
+.tags{display:flex;flex-wrap:wrap;gap:8px;padding-top:16px}
+.tags li{list-style:none;padding:7px 16px;border:1px solid var(--line);border-radius:999px;background:var(--paper);font-size:.95rem}
+
+/* Desserts: the one expressive moment */
+.desserts .head{border-bottom:none;padding-bottom:6px}
+.rail{
+  display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+  margin-inline:-20px;padding:10px 20px 18px;scrollbar-width:none;
+}
+.rail::-webkit-scrollbar{display:none}
+.rail figure{
+  flex:0 0 86%;max-width:560px;scroll-snap-align:center;
+  border-radius:6px;overflow:hidden;background:var(--paper);
+  box-shadow:0 10px 30px -14px rgba(31,27,24,.45);
+}
+.rail img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.hint{font-size:.82rem;color:var(--muted)}
+
+@media (min-width:760px){
+  .rail{margin-inline:0;padding-inline:0}
+  .rail figure{flex-basis:calc(50% - 7px)}
+}
+
+footer{
+  text-align:center;padding:34px 20px 44px;border-top:1px solid var(--line);
+  color:var(--muted);font-size:.9rem;
+}
+footer img{width:96px;margin:0 auto 10px;opacity:.9}
+footer .en{direction:ltr;letter-spacing:.22em;font-size:.74rem;margin-top:4px}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img src="img/logo.png" alt="ڤاي كوفي - VAY Coffee" width="170" height="91">
+  <p>قهوة مختصة لأيام أجمل</p>
+</header>
+
+<nav class="nav" aria-label="أقسام المنيو">
+  <ul>
+    <li><a href="#desserts">الحلويات</a></li>
+    <li><a href="#hot">الساخنة</a></li>
+    <li><a href="#cold">الباردة</a></li>
+    <li><a href="#filter">القهوة المقطرة</a></li>
+    <li><a href="#soft">الغازية</a></li>
+    <li><a href="#bites">بسكويت ومعجنات</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section id="desserts" class="desserts">
+    <div class="head"><h2>الحلويات<small>DESSERTS</small></h2></div>
+    <div class="rail" tabindex="0" aria-label="صور الحلويات">
+      <figure><img src="img/truffle-mango.jpg" alt="ترافل مانجا - 17 ريال" loading="lazy"></figure>
+      <figure><img src="img/pudding.jpg" alt="البودينق - 15 ريال" loading="lazy"></figure>
+      <figure><img src="img/cheese-basbousa.jpg" alt="تشيز البسبوسة - 15 ريال" loading="lazy"></figure>
+      <figure><img src="img/cookies.jpg" alt="كوكيز - 11 ريال" loading="lazy"></figure>
+    </div>
+    <p class="hint">اسحب لرؤية بقية الحلويات</p>
+  </section>
+
+  <section id="hot">
+    <div class="head"><h2>المشروبات الساخنة<small>HOT DRINKS</small></h2></div>
+    <ul class="list" data-list="hot"></ul>
+  </section>
+
+  <section id="cold">
+    <div class="head"><h2>المشروبات الباردة<small>COLD DRINKS</small></h2></div>
+    <ul class="list" data-list="cold"></ul>
+  </section>
+
+  <section id="filter">
+    <div class="head"><h2>القهوة المقطرة<small>FILTER COFFEE</small></h2></div>
+    <ul class="list" data-list="filter"></ul>
+  </section>
+
+  <section id="soft">
+    <div class="head"><h2>المشروبات الغازية<small>SOFT DRINKS</small></h2></div>
+    <ul class="tags" data-tags="soft"></ul>
+  </section>
+
+  <section id="bites">
+    <div class="head"><h2>بسكويت ومعجنات<small>BISCUITS &amp; PASTRIES</small></h2></div>
+    <ul class="list" data-list="bites"></ul>
+  </section>
+
+</main>
+
+<footer>
+  <img src="img/logo.png" alt="" width="96" height="51">
+  <div>الأسعار بالريال</div>
+  <div class="en">GOOD COFFEE BETTER DAYS</div>
+</footer>
+
+<script>
+/* ===== عدّل الأسعار والأصناف من هنا فقط ===== */
+const MENU = {
+  hot: [
+    ["إسبريسو كلاسيك", 11],
+    ["موكا", 12],
+    ["أمريكانو", 11],
+    ["ماتشا", 12],
+    ["كراميل ميكاتو", 14],
+    ["سبانش لاتيه", 14],
+    ["فلات وايت", 14],
+    ["كابتشينو", 14],
+    ["كورتادو", 12],
+    ["لاتيه", 14]
+  ],
+  cold: [
+    ["إسبريسو أفوجاتو", 14],
+    ["آيس أمريكانو", 13],
+    ["آيس سبانش لاتيه", 15],
+    ["آيس كراميل ميكاتو", 16],
+    ["آيس لاتيه", 14],
+    ["آيس موكا", 14],
+    ["كركديه", 15],
+    ["موهيتو كوورد", 13],
+    ["موهيتو سفن آب", 11],
+    ["ماتشا", 16],
+    ["ماء", 1]
+  ],
+  filter: [
+    ["قهوة اليوم حار صغير", 10],
+    ["قهوة اليوم حار كبير", 13],
+    ["قهوة اليوم بارد صغير", 10],
+    ["قهوة اليوم بارد كبير", 13],
+    ["قهوة اليوم حار مع إسبريسو", 17],
+    ["قهوة اليوم بارد مع إسبريسو", 17],
+    ["قهوة V60 حار", 16],
+    ["قهوة V60 بارد", 16],
+    ["قهوة اليوم حار 1 لتر", 35],
+    ["قهوة اليوم بارد 1 لتر", 45]
+  ],
+  soft: ["كوكاكولا", "سبرايت", "ميرندا", "بيبسي"],
+  bites: [
+    ["ستيكرز", 3],
+    ["تويكس", 3],
+    ["كيندر", 3],
+    ["كرواسون", 3]
+  ]
+};
+/* ============================================ */
+
+const row = ([name, price]) =>
+  `<li class="row"><span class="name">${name}</span><span class="dots" aria-hidden="true"></span><span class="price">${price}<i>ريال</i></span></li>`;
+
+document.querySelectorAll("[data-list]").forEach(el => {
+  el.innerHTML = MENU[el.dataset.list].map(row).join("");
+});
+document.querySelectorAll("[data-tags]").forEach(el => {
+  el.innerHTML = MENU[el.dataset.tags].map(n => `<li>${n}</li>`).join("");
+});
+
+/* تمييز القسم الحالي في الشريط */
+const links = [...document.querySelectorAll(".nav a")];
+const map = new Map(links.map(a => [a.getAttribute("href").slice(1), a]));
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      links.forEach(a => a.removeAttribute("aria-current"));
+      const a = map.get(e.target.id);
+      a.setAttribute("aria-current", "true");
+      a.scrollIntoView({inline: "center", block: "nearest"});
+    }
+  });
+}, {rootMargin: "-30% 0px -60% 0px"});
+document.querySelectorAll("main section").forEach(s => io.observe(s));
+</script>
+</body>
+</html>
